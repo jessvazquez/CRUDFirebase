@@ -76,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+
+
     private void listarDatos() {
         databaseReference.child("Persona").addValueEventListener(new ValueEventListener() {
             @Override
@@ -89,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
                     listV_personas.setAdapter(arrayAdapterPersona);
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -126,6 +127,10 @@ public class MainActivity extends AppCompatActivity {
             epassword.setError("campo obligatorio");
         }
     }
+//public boolean OnCreateOptionMenu(){
+//
+//        getMenuInflater().inflate(R.id.);
+//}
 
     public boolean onOptionsItemSelected(MenuItem item) {
         String nombre = enombre.getText().toString();
